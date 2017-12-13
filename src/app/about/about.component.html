@@ -59,10 +59,13 @@
     <h2>Corporate Leadership</h2>
     <div class="container" fxLayout="column" fxLayoutGap="10px">
 
-      <md-list fxFlex>
+      <md-list dense>
         <md-list-item *ngFor="let leader of leaders">
           <img md-list-avatar src={{leader.image}} alt={{leader.name}}>
-          <h1 md-line> {{leader.name}} </h1>
+          <h1 md-line> {{leader.name}} {{leader.abbr}}</h1>
+          <p md-line>
+            <span> {{leader.designation}} </span>
+          </p>
           <p md-line>
             <span> {{leader.description}} </span>
           </p>
